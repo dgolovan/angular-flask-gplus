@@ -1,0 +1,50 @@
+<style type="text/css">
+	.act_container{
+		width: 440px;
+		border: 1px solid #d8d8d8;
+		background-color: #fff;
+		margin: 10px 0;
+		padding-bottom: 10px; 
+	}
+	.act_header {
+		padding: 0 20px;
+		margin-bottom: 20px;
+	}
+
+	a.act_author_img img{
+		float: left;
+		margin: 20px 15px 0 0;
+		padding: 0;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+	}
+	div.act_info {
+		margin: 0 0 15px 61px;
+		padding: 23px 0 0 0;
+		text-overflow: ellipsis;
+	}
+	span.act_published{
+		color: #999;
+		display: inline-block;
+		font-size: 12px;
+	}
+	h4.act_author_name {
+		margin: 0;
+		border: 0;
+		font-size: 14px;
+		font-weight: normal;
+		unicode-bidi: normal;
+	}
+
+	.act_content, .act_attachment, .act_share_info{
+		padding: 5px 20px;
+	}
+	.act_share_info{
+		color: #999;
+		
+	}
+</style>
+<!-- <div ng-repeat="act in activities"> 
+	<div class="g-post" data-href="https://plus.google.com/103010372630672709997/posts/ADwzTkCK2Lc"></div>
+</div> -->
+<div ng-bind-html-unsafe="activities"></div>

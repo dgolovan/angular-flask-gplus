@@ -1,0 +1,27 @@
+<div>
+	<form name="BlogPostForm" role="form">
+	<input type="hidden" ng-model="post.slug" value="{{ post.slug }}" />
+
+	<div class="form-group">
+		<label for="post_title">Title:</label>
+		<input class="h3 form-control" id="post_title" type="text" ng-model="post.title" value="{{ post.title }}" />
+	</div>
+
+	<div class="post-header">{{ post.date_modified.$date | date:'MMM dd, yyyy'}} | by {{post.author}}</div>
+	<div class="form-group">
+		<label for="post_body">Body:</label>
+		<textarea class="post-body-edit form-control" id="post_body" ng-model="post.body" newlines-convert>{{ post.body }}</textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="post_tags">Tags:</label>
+		<textarea class="form-control" id="post_tags" ng-model="post.tags">{{ post.tags }}</textarea>
+	</div>
+	</form>
+	
+	<div class="btn-group top-pad-15">
+		<button type="button" class="save btn btn-default" ng-click="savePost()">Save</button>
+		<button type="button" class="cancel btn btn-default" ng-click="cancel()">Cancel</button>
+		<button type="button" class="delete btn btn-default" ng-click="deletePost()">Delete</button>
+	</div>
+</div>
